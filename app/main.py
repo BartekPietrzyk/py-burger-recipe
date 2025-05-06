@@ -1,4 +1,4 @@
-from typing import Any, Tuple
+from typing import Any
 from abc import ABC, abstractmethod
 
 
@@ -31,6 +31,7 @@ class Number(Validator):
                 f"Quantity should not be less than {self.min_value} "
                 f"and greater than {self.max_value}."
             )
+
 
 class OneOf(Validator):
     def __init__(self, options: (str, int)) -> None:
